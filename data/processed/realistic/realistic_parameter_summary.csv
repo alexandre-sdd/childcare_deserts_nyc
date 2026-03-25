@@ -1,0 +1,15 @@
+metric,value
+n_zipcodes,311
+n_existing_facilities_expandable,7712
+citywide_existing_total_capacity,317501
+citywide_existing_under5_capacity,69153
+citywide_realistic_expansion_capacity,61197
+n_candidate_sites,31100
+n_blocked_candidate_sites,2578
+n_feasible_candidate_sites,28522
+n_candidate_candidate_conflicts,11455
+n_candidate_existing_conflicts,4730
+n_existing_existing_too_close_diagnostic,7644
+n_zero_child_zipcodes,131
+n_zero_child_req_total_fixed,0
+n_existing_facilities_missing_coords,169

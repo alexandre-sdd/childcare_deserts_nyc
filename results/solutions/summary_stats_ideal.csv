@@ -1,0 +1,9 @@
+metric,value
+total_added_expansion_slots,206364.0
+total_added_under5_expansion_slots,202938.0
+total_new_facilities_built,386.0
+total_added_newbuild_slots,152900.0
+total_added_under5_newbuild_slots,74783.0
+facilities_in_high_cost_regime,135.0
+zipcodes_meeting_all_requirements_after,311.0
+zipcodes_not_meeting_all_requirements_after,0.0

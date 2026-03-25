@@ -1,0 +1,490 @@
+
+Gurobi 13.0.1 (mac64[arm]) logging started Mon Mar 23 21:34:47 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0xaea1575a
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.266321e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.31s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.335959e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.328074e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.328074e+08 1.3281e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.33 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.32807e+08 1.33596e+08 3.26632e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.328073972162e+08, best bound 1.328073972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Mon Mar 23 21:45:24 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0xaea1575a
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.266321e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.40s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.335959e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.328074e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.328074e+08 1.3281e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.42 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.32807e+08 1.33596e+08 3.26632e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.328073972162e+08, best bound 1.328073972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Mon Mar 23 23:58:10 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0xaea1575a
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.266321e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.42s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.335959e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.328074e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.328074e+08 1.3281e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.43 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.32807e+08 1.33596e+08 3.26632e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.328073972162e+08, best bound 1.328073972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Tue Mar 24 10:49:30 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0x76a033f9
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.119121e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.23s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.252759e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.244874e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.244874e+08 1.2449e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.24 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.24487e+08 1.25276e+08 3.11912e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.244873972162e+08, best bound 1.244873972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Tue Mar 24 11:04:27 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0x76a033f9
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.119121e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.30s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.252759e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.244874e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.244874e+08 1.2449e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.32 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.24487e+08 1.25276e+08 3.11912e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.244873972162e+08, best bound 1.244873972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Tue Mar 24 11:05:55 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0x76a033f9
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.119121e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.24s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.252759e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.244874e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.244874e+08 1.2449e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.26 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.24487e+08 1.25276e+08 3.11912e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.244873972162e+08, best bound 1.244873972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Tue Mar 24 11:25:41 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 24691 rows, 25002 columns and 65428 nonzeros (Min)
+Model fingerprint: 0x76a033f9
+Model has 25002 linear objective coefficients
+Variable types: 0 continuous, 25002 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+02, 1e+05]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+04]
+
+Found heuristic solution: objective 3.119121e+08
+Presolve removed 24399 rows and 24135 columns
+Presolve time: 0.23s
+Presolved: 292 rows, 867 columns, 1734 nonzeros
+Found heuristic solution: objective 1.252759e+08
+Variable types: 0 continuous, 867 integer (44 binary)
+Root relaxation presolved: 292 rows, 867 columns, 1734 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.244874e+08, 45 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1.244874e+08 1.2449e+08  0.00%     -    0s
+
+Explored 1 nodes (45 simplex iterations) in 0.25 seconds (0.24 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 1.24487e+08 1.25276e+08 3.11912e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.244873972162e+08, best bound 1.244873972162e+08, gap 0.0000%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Tue Mar 24 11:54:38 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 63251 rows, 32714 columns and 165684 nonzeros (Min)
+Model fingerprint: 0xcd631de8
+Model has 17290 linear objective coefficients
+Variable types: 7712 continuous, 25002 integer (7712 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+05]
+  Objective range  [1e+00, 1e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+00, 1e+05]
+
+Found heuristic solution: objective 3.119121e+08
+Presolve removed 61432 rows and 31560 columns
+Presolve time: 3.63s
+Presolved: 1819 rows, 1154 columns, 5167 nonzeros
+Found heuristic solution: objective 1.274572e+08
+Variable types: 63 continuous, 1091 integer (287 binary)
+Root relaxation presolved: 1819 rows, 1154 columns, 5167 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.266370e+08, 173 iterations, 0.04 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.2664e+08    0    9 1.2746e+08 1.2664e+08  0.64%     -    3s
+H    0     0                    1.267839e+08 1.2664e+08  0.12%     -    3s
+H    0     0                    1.266689e+08 1.2664e+08  0.03%     -    3s
+
+Explored 1 nodes (173 simplex iterations) in 3.72 seconds (1.44 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 1.26669e+08 1.26784e+08 1.27457e+08 3.11912e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.266689407981e+08, best bound 1.266369664395e+08, gap 0.0252%
+
+Gurobi 13.0.1 (mac64[arm]) logging started Tue Mar 24 16:59:55 2026
+
+Set parameter LogFile to value "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/results/gurobi_logs/ideal_model.log"
+Set parameter MIPGap to value 0.001
+Set parameter TimeLimit to value 600
+Set parameter Presolve to value 2
+Set parameter Threads to value 0
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (mac64[arm] - Darwin 25.3.0 25D2128)
+
+CPU model: Apple M4 Pro
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Non-default parameters:
+TimeLimit  600
+MIPGap  0.001
+Presolve  2
+
+Optimize a model with 63251 rows, 32714 columns and 165684 nonzeros (Min)
+Model fingerprint: 0xcd631de8
+Model has 17290 linear objective coefficients
+Variable types: 7712 continuous, 25002 integer (7712 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+05]
+  Objective range  [1e+00, 1e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [2e+00, 1e+05]
+
+Found heuristic solution: objective 3.119121e+08
+Presolve removed 61432 rows and 31560 columns
+Presolve time: 2.36s
+Presolved: 1819 rows, 1154 columns, 5167 nonzeros
+Found heuristic solution: objective 1.274572e+08
+Variable types: 63 continuous, 1091 integer (287 binary)
+Root relaxation presolved: 1819 rows, 1154 columns, 5167 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover time: 0.00 seconds (0.00 work units)
+
+Root relaxation: objective 1.266370e+08, 173 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.2664e+08    0    9 1.2746e+08 1.2664e+08  0.64%     -    2s
+H    0     0                    1.267839e+08 1.2664e+08  0.12%     -    2s
+H    0     0                    1.266689e+08 1.2664e+08  0.03%     -    2s
+
+Explored 1 nodes (173 simplex iterations) in 2.41 seconds (1.44 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 1.26669e+08 1.26784e+08 1.27457e+08 3.11912e+08 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 1.266689407981e+08, best bound 1.266369664395e+08, gap 0.0252%

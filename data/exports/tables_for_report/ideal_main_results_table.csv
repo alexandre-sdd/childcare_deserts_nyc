@@ -1,0 +1,9 @@
+category,metric,value
+Objective,Minimum total funding,126668940.798073
+Capacity added,Added slots through expansion,206364.0
+Capacity added,Added slots through new facilities,152900.0
+Capacity added,Added under-5 slots through expansion,202938.0
+Capacity added,Added under-5 slots through new facilities,74783.0
+Construction,Total new facilities built,386.0
+Coverage,Zipcodes meeting all requirements after optimization,311.0
+Coverage,Zipcodes failing at least one requirement after optimization,0.0

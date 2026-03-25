@@ -1,0 +1,6 @@
+check,value,target,violations,passed
+zipcodes_meeting_service_requirements,311,311,0,1
+blocked_candidates_selected,0,0,0,1
+candidate_conflict_pair_violations,0,0,0,1
+facility_cap_or_under5_violations,0,0,0,1
+zero_child_zipcodes_with_new_builds,0,0,0,1

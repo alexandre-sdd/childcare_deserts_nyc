@@ -1,0 +1,4 @@
+size,n_new_facilities,total_capacity,total_under5,fixed_build_cost
+large,1261,504400,251111.0,145015000
+medium,10,2000,955.0,950000
+small,13,1300,588.0,845000

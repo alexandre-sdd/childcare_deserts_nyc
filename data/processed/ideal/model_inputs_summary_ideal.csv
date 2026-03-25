@@ -1,0 +1,15 @@
+metric,value
+number_of_zipcodes,311.0
+number_of_active_facilities,7712.0
+total_existing_capacity_citywide,317501.0
+total_existing_under5_capacity_citywide,69153.0
+zipcodes_desert_before_total_rule,162.0
+zipcodes_under5_short_before,179.0
+zipcodes_needing_intervention_before,180.0
+citywide_total_gap,236460.0
+citywide_under5_gap,277721.0
+employment_rate_median_imputation_value,0.4766521247374374
+average_income_median_imputation_value,61197.28128267689
+chosen_expansion_cap_option,2.0
+avg_facility_expansion_cap_U_f,48.822717842323655
+max_facility_expansion_cap_U_f,500.0

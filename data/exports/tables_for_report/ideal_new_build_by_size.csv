@@ -1,0 +1,4 @@
+size,num_new_facilities,total_new_under5_assigned,fixed_build_cost_total,under5_equipment_cost_newbuild
+large,380.0,74393.0,43700000.0,7439300.0
+medium,3.0,290.0,285000.0,29000.0
+small,3.0,100.0,195000.0,10000.0

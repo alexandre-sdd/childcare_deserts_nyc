@@ -1,0 +1,4 @@
+size,new_total_capacity,new_under5_capacity_max,fixed_build_cost
+small,100,50,65000
+medium,200,100,95000
+large,400,200,115000

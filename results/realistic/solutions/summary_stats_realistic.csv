@@ -1,0 +1,15 @@
+metric,value
+n_expanded_facilities,1126.0
+total_expansion_slots,25108.0
+total_expansion_under5_slots,25067.0
+n_new_facilities,1284.0
+total_new_capacity,507700.0
+total_new_under5_capacity,252654.0
+n_new_small_facilities,13.0
+n_new_medium_facilities,10.0
+n_new_large_facilities,1261.0
+zipcodes_with_new_facilities,180.0
+zipcodes_with_expansion,151.0
+zipcodes_zero_total_slack,130.0
+zipcodes_zero_under5_slack,311.0
+zipcodes_meeting_all_requirements_after,311.0

@@ -1,0 +1,12 @@
+metric,value
+model_status_code,2
+model_status_text,OPTIMAL
+objective_value,183963207.4983168
+best_bound,183813931.55293489
+mip_gap,0.000811444567703982
+solve_seconds,42.87774586677551
+num_variables,201980
+num_constraints,155819
+solution_count,10
+cost_mode,additive_blocks
+time_limit_seconds,600

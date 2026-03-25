@@ -1,0 +1,22 @@
+{
+  "active_facility_statuses": [
+    "License",
+    "Registration"
+  ],
+  "use_children_capacity_as_under5_proxy": true,
+  "income_missing_imputation": "citywide_median",
+  "employment_missing_imputation": "citywide_median",
+  "population_missing_imputation": "treat_as_zero_after_merge",
+  "ideal_expansion_cap_option": 2,
+  "ideal_expansion_cap_option_1_definition": "x_f <= max(0, min(1.2*n_f, 500 - n_f))",
+  "ideal_expansion_cap_option_2_definition": "x_f <= min(1.2*n_f, 500)",
+  "chosen_expansion_cap_option": 2,
+  "high_demand_rule": "employment_rate >= 0.60 OR average_income <= 60000",
+  "desert_threshold_high_demand": "available_slots <= 0.5 * child_population_0_12",
+  "desert_threshold_normal_demand": "available_slots <= (1/3) * child_population_0_12",
+  "under5_requirement": "available_under5_slots >= (2/3) * pop_0_5",
+  "total_requirement_integer_rule": "minimum non-desert integer capacity = floor(threshold) + 1",
+  "under5_requirement_integer_rule": "minimum integer under5 capacity = ceil((2/3) * pop_0_5)",
+  "cslots_function_type": "tiered_decreasing",
+  "cslots_notes": "decreasing per-slot expansion cost to reflect economies of scale"
+}
