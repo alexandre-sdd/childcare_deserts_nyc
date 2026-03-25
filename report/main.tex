@@ -654,12 +654,21 @@ The corresponding block-specific cost coefficients follow the formulas used in t
 \mathrm{coef3}_f = \frac{20000 + 1000\,n_f}{n_f}
 \]
 
-\Cref{fig:realistic-expansion-functions} visualizes these implemented Part 2 expansion functions. The left panel shows the staircase caps created by cumulative floors, and the right panel shows how the block-specific per-slot coefficients decrease with facility size.
+Under the original assignment Part 2 rule, the total expansion cost at facility \(f\) is
+\[
+C_f(x_f)=
+\begin{cases}
+\mathrm{coef1}_f x_f, & 0 \le x_f \le \left\lfloor 0.10\,n_f \right\rfloor,\\
+\mathrm{coef2}_f x_f, & \left\lfloor 0.10\,n_f \right\rfloor < x_f \le \left\lfloor 0.15\,n_f \right\rfloor,\\
+\mathrm{coef3}_f x_f, & \left\lfloor 0.15\,n_f \right\rfloor < x_f \le \left\lfloor 0.20\,n_f \right\rfloor.
+\end{cases}
+\]
+This discontinuous regime-based total-cost rule creates upward jumps at the \(10\%\) and \(15\%\) thresholds because the higher regime coefficient applies to the full expansion amount. \Cref{fig:realistic-expansion-functions} illustrates the assignment-style example \(n_f=100\), where the breakpoints occur at \(10\), \(15\), and \(20\) added slots. The implemented solver later replaces this literal rule with an additive approximation for tractability.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{realistic_expansion_functions.png}
-\caption{Schematic of the implemented Part 2 expansion functions. Left: cumulative-floor block caps as functions of current facility size. Right: block-specific per-slot coefficients as functions of current facility size.}
+\caption{Original assignment Part 2 total expansion cost rule for the assignment-style example \(n_f=100\). Dashed vertical segments mark the jumps at the \(10\%\) and \(15\%\) thresholds, where the higher regime coefficient applies to the entire expansion amount.}
 \label{fig:realistic-expansion-functions}
 \end{figure}
 

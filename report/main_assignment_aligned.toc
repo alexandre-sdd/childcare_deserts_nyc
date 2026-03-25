@@ -6,11 +6,11 @@
 \contentsline {subsection}{\numberline {2.3}Intervention parameters}{3}{subsection.2.3}%
 \contentsline {paragraph}{Part 1 benchmark parameters.}{3}{section*.6}%
 \contentsline {paragraph}{Part 2 realistic parameters.}{3}{section*.7}%
-\contentsline {section}{\numberline {3}Methods}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Part 1 benchmark model}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Part 2 realistic model}{5}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Results}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Part 1 benchmark results}{6}{subsection.4.1}%
+\contentsline {section}{\numberline {3}Methods}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Part 1 benchmark model}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Part 2 realistic model}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Results}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Part 1 benchmark results}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Part 2 realistic results}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comparison and interpretation}{7}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Conclusions}{8}{section.5}%
+\contentsline {subsection}{\numberline {4.3}Comparison and interpretation}{8}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusions}{9}{section.5}%

@@ -26,18 +26,18 @@
 \contentsline {subsection}{\numberline {2.1}Problem statement}{11}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data and parameter construction}{11}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Realistic expansion parameters}{11}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Candidate-site and distance parameters}{12}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Build options and inherited assumptions}{13}{subsubsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.3}Optimization model}{13}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Modeling assumptions}{13}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Decision variables}{14}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Objective function}{14}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Constraints}{14}{subsubsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.4}Results and interpretation}{15}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Optimal solution summary}{15}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Model verification}{16}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Interpretation}{17}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}Limitations}{18}{subsubsection.2.4.4}%
-\contentsline {section}{Conclusions}{18}{section*.19}%
-\contentsline {section}{Bibliography}{18}{section*.20}%
-\contentsline {section}{Appendix}{19}{section*.22}%
+\contentsline {subsubsection}{\numberline {2.2.2}Candidate-site and distance parameters}{13}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Build options and inherited assumptions}{14}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Optimization model}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Modeling assumptions}{14}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Decision variables}{15}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Objective function}{15}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Constraints}{15}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Results and interpretation}{16}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Optimal solution summary}{16}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Model verification}{17}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Interpretation}{18}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}Limitations}{19}{subsubsection.2.4.4}%
+\contentsline {section}{Conclusions}{19}{section*.19}%
+\contentsline {section}{Bibliography}{19}{section*.20}%
+\contentsline {section}{Appendix}{20}{section*.22}%
