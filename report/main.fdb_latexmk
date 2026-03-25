@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1774472199.37886 "main.tex" "main.pdf" "main" 1774472201.12787 0
+["pdflatex"] 1774474678.48803 "main.tex" "main.pdf" "main" 1774474680.2154 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -218,10 +218,10 @@
   "figures/part_comparison_overview.png" 1774385996.01233 96766 6ef06849559b969d77596924bd426447 ""
   "figures/realistic_expansion_functions.png" 1774472179.64098 81267 1f7bcdcdad6bdfe9062422580661757f ""
   "figures/realistic_mix_and_zipcodes.png" 1774385996.34906 127393 03a0f9ed79b0793857641f7a9cf29db0 ""
-  "main.aux" 1774472201.00172 9094 5e8905e64e67ab5bce6557f5c17ef05f "pdflatex"
-  "main.out" 1774472201.0026 6513 66432fa70b0b3b04bb341dd1a5ead0b6 "pdflatex"
-  "main.tex" 1774472126.20125 48056 b2c55b0f3bfe3a17e5408a6dae4a44f4 ""
-  "main.toc" 1774472201.00314 3726 35993f426193a92712afba4127756ed0 "pdflatex"
+  "main.aux" 1774474680.10817 9096 3e80e68c7d09a29c48879933e443e129 "pdflatex"
+  "main.out" 1774474680.11322 6513 66432fa70b0b3b04bb341dd1a5ead0b6 "pdflatex"
+  "main.tex" 1774474673.771 48875 26a28dde7f2840b6d24557be0858330a ""
+  "main.toc" 1774474680.11662 3728 82e20122e745b777b9d765cd3b4fafa1 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

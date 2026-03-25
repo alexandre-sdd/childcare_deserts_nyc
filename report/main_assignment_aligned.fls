@@ -361,6 +361,7 @@ INPUT ./figures/realistic_expansion_functions.png
 INPUT ./figures/realistic_expansion_functions.png
 INPUT ./figures/realistic_expansion_functions.png
 INPUT ./figures/realistic_expansion_functions.png
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT ./figures/part_comparison_overview.png
 INPUT ./figures/part_comparison_overview.png

@@ -132,7 +132,7 @@ In high-demand areas, defined as zip codes with employment rate at least \(60\%\
 This project studies the minimum public funding needed to eliminate coded childcare deserts across NYC. We solve the problem in two stages: Part 1 builds an implemented benchmark model that allows free siting of new facilities and more flexible expansion of existing ones. Part 2 keeps the same demand logic but imposes tighter expansion caps, candidate-site restrictions, and spacing rules, producing a more operational planning model.
 
 \paragraph{Code availability.}
-The working code is organized as a seven-stage notebook pipeline in the submitted repository: shared data cleaning, benchmark parameter estimation, benchmark optimization, benchmark visualization, realistic parameter estimation, realistic optimization and validation, and final comparison visualization. The workflow first constructs shared inputs, then solves Part 1, then solves Part 2, and finally exports the tables and figures used in this report. The submitted repository contains the notebook pipeline under \texttt{notebooks/} and the report files under \texttt{report/}. \Cref{fig:code-pipeline-aligned} gives a compact schema of that pipeline.
+The working code is organized as a seven-stage notebook pipeline in the submitted repository: shared data cleaning, benchmark parameter estimation, benchmark optimization, benchmark visualization, realistic parameter estimation, realistic optimization and validation, and final comparison visualization. The workflow first constructs shared inputs, then solves Part 1, then solves Part 2, and finally exports the tables and figures used in this report. The submitted repository is available at \url{https://github.com/alexandre-sdd/childcare_deserts_nyc}; it contains the notebook pipeline under \texttt{notebooks/} and the report files under \texttt{report/}. \Cref{fig:code-pipeline-aligned} gives a compact schema of that pipeline.
 
 \begin{figure}[H]
 \centering
@@ -259,7 +259,7 @@ Large & 400 & 200 & 115,000 \\
 \end{table}
 
 \paragraph{Part 1 benchmark parameters.}
-The instructor-approved expansion-cap interpretation used in the notebook is
+For both parts, \(n_f\) denotes the current licensed capacity at facility \(f\). In Part 1, \(x_f\) denotes the total added slots at that facility. The instructor-approved expansion-cap interpretation used in the notebook is
 \[
 x_f \le \min(1.2 n_f,\ 500).
 \]
@@ -280,19 +280,19 @@ c_f^{(2)} = \frac{20000 + 200\,n_f}{n_f}.
 The implemented Part 1 model then prices each facility's expansion at \(c_f^{(1)}\) if \(x_f < n_f\) and at \(c_f^{(2)}\) if \(x_f \ge n_f\).
 
 \paragraph{Part 2 realistic parameters.}
-The realistic parameter-estimation stage replaces the single benchmark cap with three cumulative-floor expansion blocks:
+The realistic parameter-estimation stage no longer treats expansion as one undifferentiated total. Instead, it partitions the allowed increase at each facility into three incremental integer bands: the first \(10\%\) of current capacity, the next \(5\%\), and the final \(5\%\), with an overall \(20\%\) cap. The floor operators convert those percentage thresholds into slot counts while keeping the total limit equal to \(\lfloor 0.20\,n_f \rfloor\):
 \[
 \mathrm{cap1}_f = \left\lfloor 0.10\,n_f \right\rfloor,\qquad
 \mathrm{cap2}_f = \left\lfloor 0.15\,n_f \right\rfloor - \left\lfloor 0.10\,n_f \right\rfloor,\qquad
 \mathrm{cap3}_f = \left\lfloor 0.20\,n_f \right\rfloor - \left\lfloor 0.15\,n_f \right\rfloor.
 \]
-These correspond to the \(0\%\) to \(10\%\), \(10\%\) to \(15\%\), and \(15\%\) to \(20\%\) expansion bands, so total realistic expansion room at facility \(f\) is \(\lfloor 0.20\,n_f \rfloor\). The associated block-cost coefficients are
+So \(\mathrm{cap1}_f\) is the size of the first band, \(\mathrm{cap2}_f\) is the additional room between \(10\%\) and \(15\%\), and \(\mathrm{cap3}_f\) is the additional room between \(15\%\) and \(20\%\). The associated block-cost coefficients are
 \[
 \mathrm{coef1}_f = \frac{20000 + 200\,n_f}{n_f},\qquad
 \mathrm{coef2}_f = \frac{20000 + 400\,n_f}{n_f},\qquad
 \mathrm{coef3}_f = \frac{20000 + 1000\,n_f}{n_f}.
 \]
-Under the original assignment Part 2 rule, the total expansion cost at facility \(f\) is
+Later, the optimization model uses decision variables \(x_{1f},x_{2f},x_{3f}\) for those three bands, so total added slots are \(x_f := x_{1f}+x_{2f}+x_{3f}\). Under the original assignment Part 2 rule, the total expansion cost is
 \[
 C_f(x_f)=
 \begin{cases}
@@ -301,31 +301,37 @@ C_f(x_f)=
 \mathrm{coef3}_f x_f, & \left\lfloor 0.15\,n_f \right\rfloor < x_f \le \left\lfloor 0.20\,n_f \right\rfloor.
 \end{cases}
 \]
-This discontinuous regime-based total-cost rule creates upward jumps at the \(10\%\) and \(15\%\) thresholds because the higher regime coefficient applies to the full expansion level, not just to the incremental block. The processed inputs imply a citywide realistic expansion room of \(61{,}197\) slots. \Cref{fig:realistic-expansion-functions} illustrates the assignment-style example \(n_f=100\), where the breakpoints occur at \(10\), \(15\), and \(20\) added slots. The implemented solver later replaces this literal rule with an additive approximation for tractability. The shared benchmark demand table also carries the zero-child rule into both models, so zip codes with zero observed child population have zero total-slot requirement.
+This discontinuous regime-based total-cost rule creates upward jumps at the \(10\%\) and \(15\%\) thresholds because the higher regime coefficient applies to the full expansion level, not just to the incremental block. The processed inputs imply a citywide realistic expansion room of \(61{,}197\) slots. \Cref{fig:realistic-expansion-functions} illustrates the assignment-style example \(n_f=100\), where the breakpoints occur at \(10\), \(15\), and \(20\) added slots. The implemented solver later replaces this literal rule with an additive approximation for tractability.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{realistic_expansion_functions.png}
-\caption{Original assignment Part 2 total expansion cost rule for the assignment-style example \(n_f=100\). Dashed vertical segments mark the jumps at the \(10\%\) and \(15\%\) thresholds, where the higher regime coefficient applies to the entire expansion amount.}
+\includegraphics[width=0.8\textwidth]{realistic_expansion_functions.png}
+\caption{Total realistic expansion cost rule for the example \(n_f=100\). Dashed vertical segments mark the jumps at the \(10\%\) and \(15\%\) thresholds, where the higher regime coefficient applies to the entire expansion amount.}
 \label{fig:realistic-expansion-functions}
 \end{figure}
 
 \begin{table}[H]
 \centering
 \small
-\begin{tabular}{lr}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{0.86\textwidth}{L{2.7cm}Y r}
 \toprule
-\textbf{Screening metric} & \textbf{Value} \\
+\textbf{Block} & \textbf{Metric} & \textbf{Value} \\
 \midrule
-Candidate sites examined & 31,100 \\
-Blocked candidate sites & 2,578 \\
-Feasible candidate sites & 28,522 \\
-Candidate-candidate conflict pairs & 11,455 \\
-Candidate-existing conflict pairs & 4,730 \\
-Existing-existing close pairs (diagnostic only) & 7,644 \\
-Facilities missing coordinates & 169 \\
+\multicolumn{3}{l}{\textit{Candidate screening}} \\
+Sites & Candidate sites examined & 31,100 \\
+Sites & Blocked candidate sites & 2,578 \\
+Sites & Feasible candidate sites & 28,522 \\
+\addlinespace[2pt]
+\multicolumn{3}{l}{\textit{Conflict structure}} \\
+Pairs & Candidate-candidate conflict pairs & 11,455 \\
+Pairs & Candidate-existing conflict pairs & 4,730 \\
+Pairs & Existing-existing close pairs (diagnostic only) & 7,644 \\
+\addlinespace[2pt]
+\multicolumn{3}{l}{\textit{Data quality}} \\
+Missing geo & Facilities missing coordinates & 169 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \caption{Part 2 site-screening outputs from the realistic parameter-estimation stage}
 \label{tab:screening}
 \end{table}
@@ -334,7 +340,7 @@ Facilities missing coordinates & 169 \\
 
 \subsection{Part 1 benchmark model}
 
-The benchmark model is defined over zip codes \(z \in Z\), active existing facilities \(f \in F\), and build sizes \(s \in S=\{\text{small},\text{medium},\text{large}\}\). The key decision variables are
+The benchmark model is defined over zip codes \(z \in Z\), active existing facilities \(f \in F\), and build sizes \(s \in S=\{\text{small},\text{medium},\text{large}\}\). For zipcode-level aggregation, \(F(z)\) denotes the set of existing facilities in zipcode \(z\). The key decision variables are
 \[
 \begin{aligned}
 x_f &= \text{total expansion slots at facility } f,\\
@@ -353,23 +359,36 @@ The objective is to minimize modeled expansion cost, fixed build cost, and \(\$1
  + 100\left(\sum_{f \in F}u_f+\sum_{z \in Z}\sum_{s \in S}g_{zs}\right).
 \]
 The core constraints enforce facility-level expansion caps, under-\(5\) assignment limits, threshold logic for the two cost regimes, and zip-code service requirements:
+
+\noindent\textit{Facility-level cap and regime constraints.}
 \[
-x_f \le U_f, \qquad u_f \le x_f, \qquad x_f \le (n_f-1)+U_f\delta_f,\qquad x_f \ge n_f\delta_f,
+\begin{alignedat}{2}
+x_f &\le U_f, &\qquad u_f &\le x_f,\\
+x_f &\le (n_f-1)+U_f\delta_f, &\qquad x_f &\ge n_f\delta_f,
+\end{alignedat}
 \]
+
+\noindent\textit{Zipcode service constraints and under-\(5\) build limits.}
 \[
-\mathrm{existing\_total}_z + \sum_{f \in F(z)}x_f + \sum_{s \in S}B_s y_{zs} \ge \mathrm{req\_total}_z,
-\]
-\[
-\mathrm{existing\_under5}_z + \sum_{f \in F(z)}u_f + \sum_{s \in S}g_{zs} \ge \mathrm{req\_under5}_z,\qquad
-g_{zs} \le U_s y_{zs}.
-\]
-Big-\(M\) linking constraints then force \(w_f = c_f^{(1)}x_f\) when \(\delta_f=0\) and \(w_f = c_f^{(2)}x_f\) when \(\delta_f=1\), so the whole expansion is priced under one regime.
+\begin{aligned}
+\mathrm{existing\_total}_z + \sum_{f \in F(z)}x_f + \sum_{s \in S}B_s y_{zs}
+&\ge \mathrm{req\_total}_z,\\
+\mathrm{existing\_under5}_z + \sum_{f \in F(z)}u_f + \sum_{s \in S}g_{zs}
+&\ge \mathrm{req\_under5}_z,\\
+g_{zs} &\le U_s y_{zs}.
+\end{aligned}
+\] The implemented model also includes non-negativity and integrality constraints on the decision variables, but those are omitted here for clarity.
 
 This model is intentionally optimistic. It does not represent siting feasibility, minimum spacing, or cross-zip travel. It is best interpreted as the implemented benchmark model rather than a deployable plan.
 
+\begin{resultbox}
+\textbf{Implemented Part 1 model.}
+The benchmark optimization stage solves a citywide MILP with \(32{,}714\) variables and \(63{,}251\) constraints. The model enforces zipcode-level total and under-\(5\) service targets through facility expansion and zipcode-level new-build decisions, but it does not impose candidate-site or spacing restrictions.
+\end{resultbox}
+
 \subsection{Part 2 realistic model}
 
-Part 2 keeps the same demand targets but changes the intervention structure. Existing facilities may expand only within three capped bands, and new facilities can only be opened on observed candidate sites \(l \in L\). The key parameters are the three incumbent expansion caps \(\mathrm{cap1}_f,\mathrm{cap2}_f,\mathrm{cap3}_f\), the corresponding coefficients \(\mathrm{coef1}_f,\mathrm{coef2}_f,\mathrm{coef3}_f\), the blocked-site set \(L_{\text{blocked}}\), the within-zipcode conflict set \(\mathcal{C}\), and the build-menu parameters \(K_s,B_s,U_s\). The key decision variables are
+The realistic model keeps the same demand targets but changes the intervention structure. Existing facilities may expand only within three capped bands, and new facilities can only be opened on observed candidate sites \(l \in L\). For zipcode-level aggregation, \(L(z)\) denotes the set of candidate sites in zipcode \(z\). The key parameters are the three incumbent expansion caps \(\mathrm{cap1}_f,\mathrm{cap2}_f,\mathrm{cap3}_f\), the corresponding coefficients \(\mathrm{coef1}_f,\mathrm{coef2}_f,\mathrm{coef3}_f\), the blocked-site set \(L_{\text{blocked}}\), the within-zipcode conflict set \(\mathcal{C}\), and the build-menu parameters \(K_s,B_s,U_s\). The key decision variables are
 \[
 \begin{aligned}
 x_{1f},x_{2f},x_{3f} &= \text{added slots in the }0\%\text{--}10\%,\,10\%\text{--}15\%,\,15\%\text{--}20\%\text{ bands},\\
@@ -386,22 +405,35 @@ The implemented objective is
  + 100\left(\sum_{f \in F}u_f+\sum_{l \in L}\sum_{s \in S}g_{ls}\right).
 \]
 The main feasibility constraints are
+
+\noindent\textit{Incumbent expansion-band constraints.}
 \[
-x_{1f} \le \mathrm{cap1}_f,\qquad x_{2f} \le \mathrm{cap2}_f,\qquad x_{3f} \le \mathrm{cap3}_f,\qquad
-u_f \le x_{1f}+x_{2f}+x_{3f},
+\begin{alignedat}{3}
+x_{1f} &\le \mathrm{cap1}_f, &\qquad
+x_{2f} &\le \mathrm{cap2}_f, &\qquad
+x_{3f} &\le \mathrm{cap3}_f,\\
+u_f &\le x_{1f}+x_{2f}+x_{3f}.
+\end{alignedat}
 \]
+
+\noindent\textit{Candidate-site selection, under-\(5\) assignment, and spacing constraints.}
 \[
-\sum_{s \in S} y_{ls} \le 1,\qquad g_{ls} \le U_s y_{ls},
+\begin{alignedat}{2}
+\sum_{s \in S} y_{ls} &\le 1, &\qquad
+g_{ls} &\le U_s y_{ls},\\
+\sum_{s \in S} y_{ls} &= 0 \quad \forall l \in L_{\text{blocked}},\\
+\sum_{s \in S} y_{l_1s} + \sum_{s \in S} y_{l_2s} &\le 1 \quad \forall (l_1,l_2)\in \mathcal{C}.
+\end{alignedat}
 \]
+
+\noindent\textit{Zipcode service constraints.}
 \[
-\sum_{s \in S} y_{ls} = 0 \quad \forall l \in L_{\text{blocked}},\qquad
-\sum_{s \in S} y_{l_1s} + \sum_{s \in S} y_{l_2s} \le 1 \quad \forall (l_1,l_2)\in \mathcal{C},
-\]
-\[
-\mathrm{existing\_total}_z + \sum_{f \in F(z)}(x_{1f}+x_{2f}+x_{3f}) + \sum_{(l,s)\in L(z)} B_s y_{ls} \ge \mathrm{req\_total}_z,
-\]
-\[
-\mathrm{existing\_under5}_z + \sum_{f \in F(z)}u_f + \sum_{(l,s)\in L(z)} g_{ls} \ge \mathrm{req\_under5}_z.
+\begin{aligned}
+\mathrm{existing\_total}_z + \sum_{f \in F(z)}(x_{1f}+x_{2f}+x_{3f}) + \sum_{l \in L(z)}\sum_{s \in S} B_s y_{ls}
+&\ge \mathrm{req\_total}_z,\\
+\mathrm{existing\_under5}_z + \sum_{f \in F(z)}u_f + \sum_{l \in L(z)}\sum_{s \in S} g_{ls}
+&\ge \mathrm{req\_under5}_z.
+\end{aligned}
 \]
 These choices match the NYC planning context described in the assignment. Banded incumbent variables make the tighter \(20\%\) cap and increasing marginal expansion difficulty transparent, while candidate-site binary variables make the \(0.06\)-mile screening rule enforceable. Because existing facilities are fixed assets in the current planning horizon, existing-existing proximity issues are tracked as diagnostics rather than modeled as closures or relocations.
 
@@ -424,22 +456,28 @@ The implemented benchmark requires \(\$126.67\) million, including \(206{,}364\)
 \begin{table}[H]
 \centering
 \small
-\begin{tabular}{lr}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{0.92\textwidth}{L{2.4cm}Y r}
 \toprule
-\textbf{Part 1 metric} & \textbf{Value} \\
+\textbf{Block} & \textbf{Metric} & \textbf{Value} \\
 \midrule
-Total objective (\$) & 126,668,941 \\
-Expansion cost (\$) & 54,716,841 \\
-New-build cost (\$) & 44,180,000 \\
-Under-\(5\) equipment cost (\$) & 27,772,100 \\
-Added expansion slots & 206,364 \\
-Added under-\(5\) expansion slots & 202,938 \\
-New facilities built & 386 \\
-Added new-build slots & 152,900 \\
-Added under-\(5\) new-build slots & 74,783 \\
-Zip codes meeting all coded requirements after solve & 311 \\
+\multicolumn{3}{l}{\textit{Costs}} \\
+Objective & Total objective (\$) & 126,668,941 \\
+Objective & Expansion cost (\$) & 54,716,841 \\
+Objective & New-build cost (\$) & 44,180,000 \\
+Objective & Under-\(5\) equipment cost (\$) & 27,772,100 \\
+\addlinespace[2pt]
+\multicolumn{3}{l}{\textit{Capacity added}} \\
+Expansion & Added expansion slots & 206,364 \\
+Expansion & Added under-\(5\) expansion slots & 202,938 \\
+New build & Added new-build slots & 152,900 \\
+New build & Added under-\(5\) new-build slots & 74,783 \\
+\addlinespace[2pt]
+\multicolumn{3}{l}{\textit{Facilities and coverage}} \\
+Facilities & New facilities built & 386 \\
+Coverage & Zip codes meeting all coded requirements after solve & 311 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \caption{Implemented Part 1 benchmark results}
 \label{tab:part1-results}
 \end{table}
@@ -456,24 +494,30 @@ The implemented realistic model costs \(\$183.96\) million. Expansion falls to \
 \begin{table}[H]
 \centering
 \small
-\begin{tabular}{lr}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{0.92\textwidth}{L{2.4cm}Y r}
 \toprule
-\textbf{Part 2 metric} & \textbf{Value} \\
+\textbf{Block} & \textbf{Metric} & \textbf{Value} \\
 \midrule
-Total objective (\$) & 183,963,207 \\
-Expansion cost (\$) & 9,381,107 \\
-New-build cost (\$) & 146,810,000 \\
-Under-\(5\) equipment cost (\$) & 27,772,100 \\
-Expanded facilities & 1,126 \\
-Added expansion slots & 25,108 \\
-Added under-\(5\) expansion slots & 25,067 \\
-New facilities built & 1,284 \\
-Added new-build slots & 507,700 \\
-Added under-\(5\) new-build slots & 252,654 \\
-Zip codes with zero under-\(5\) slack & 311 \\
-Zip codes meeting all coded requirements after solve & 311 \\
+\multicolumn{3}{l}{\textit{Costs}} \\
+Objective & Total objective (\$) & 183,963,207 \\
+Objective & Expansion cost (\$) & 9,381,107 \\
+Objective & New-build cost (\$) & 146,810,000 \\
+Objective & Under-\(5\) equipment cost (\$) & 27,772,100 \\
+\addlinespace[2pt]
+\multicolumn{3}{l}{\textit{Capacity added}} \\
+Expansion & Added expansion slots & 25,108 \\
+Expansion & Added under-\(5\) expansion slots & 25,067 \\
+New build & Added new-build slots & 507,700 \\
+New build & Added under-\(5\) new-build slots & 252,654 \\
+\addlinespace[2pt]
+\multicolumn{3}{l}{\textit{Facilities and coverage}} \\
+Facilities & Expanded facilities & 1,126 \\
+Facilities & New facilities built & 1,284 \\
+Coverage & Zip codes with zero under-\(5\) slack & 311 \\
+Coverage & Zip codes meeting all coded requirements after solve & 311 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \caption{Implemented Part 2 realistic results}
 \label{tab:part2-results}
 \end{table}
@@ -530,7 +574,9 @@ The highest-intervention zip codes remain concentrated in a relatively small set
 
 The seven-stage notebook pipeline supports a clear benchmark-to-realistic comparison. Under the implemented benchmark model, NYC can eliminate coded childcare deserts for \(\$126.67\) million. Under the implemented realistic model, the cost rises to \(\$183.96\) million because the city loses flexible siting and can expand incumbent facilities only modestly.
 
-The key policy insight is not just that the realistic model is more expensive. It is that the intervention mechanism changes. Once expansion becomes tightly capped and candidate-site spacing is enforced, the city must fund many more large new facilities. Across both parts, the under-\(5\) requirement is the dominant planning driver.
+The key policy insight is not only that the realistic model is more expensive, but that the structure of optimal intervention changes. Once expansion limits become binding and candidate-site spacing is enforced, the solution shifts away from incumbent expansion toward many more large new facilities. That change reflects the trade-off between implementation realism and cost efficiency in this planning setting.
+
+Across both parts, the under-\(5\) requirement remains the dominant planning driver, often forcing excess total capacity in order to satisfy age-specific targets. In that sense, the model suggests that relaxing expansion caps or expanding the pool of feasible candidate sites could reduce modeled funding needs while still meeting the report's zipcode-level service requirements. Overall, the framework provides a structured basis for evaluating how implementation constraints change investment scale, facility mix, and the cost of eliminating coded childcare deserts.
 
 \begin{thebibliography}{9}
 

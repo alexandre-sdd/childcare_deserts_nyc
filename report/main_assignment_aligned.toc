@@ -11,6 +11,6 @@
 \contentsline {subsection}{\numberline {3.2}Part 2 realistic model}{6}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Results}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Part 1 benchmark results}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Part 2 realistic results}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comparison and interpretation}{8}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Conclusions}{9}{section.5}%
+\contentsline {subsection}{\numberline {4.2}Part 2 realistic results}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comparison and interpretation}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusions}{10}{section.5}%

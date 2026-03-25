@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  25 MAR 2026 16:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  25 MAR 2026 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1061,12 +1061,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }]
-<figures/realistic_expansion_functions.png, id=125, 476.982pt x 303.534pt>
+<figures/realistic_expansion_functions.png, id=126, 476.982pt x 303.534pt>
 File: figures/realistic_expansion_functions.png Graphic file (type png)
 <use figures/realistic_expansion_functions.png>
 Package pdftex.def Info: figures/realistic_expansion_functions.png  used on inp
 ut line 308.
-(pdftex.def)             Requested size: 446.26582pt x 283.99274pt.
+(pdftex.def)             Requested size: 375.80544pt x 239.1547pt.
 
 
 [4 <./figures/realistic_expansion_functions.png>]
@@ -1076,27 +1076,28 @@ ut line 308.
 [6]
 
 [7]
-<figures/part_comparison_overview.png, id=150, 895.491pt x 342.954pt>
+
+[8]
+Package mdframed Info: Not enough space on this page on input line 528.
+<figures/part_comparison_overview.png, id=156, 895.491pt x 342.954pt>
 File: figures/part_comparison_overview.png Graphic file (type png)
 <use figures/part_comparison_overview.png>
 Package pdftex.def Info: figures/part_comparison_overview.png  used on input li
-ne 513.
+ne 557.
 (pdftex.def)             Requested size: 441.57086pt x 169.11124pt.
-
-
-[8]
 <figures/realistic_mix_and_zipcodes.png, id=157, 891.8775pt x 353.466pt>
 File: figures/realistic_mix_and_zipcodes.png Graphic file (type png)
 <use figures/realistic_mix_and_zipcodes.png>
 Package pdftex.def Info: figures/realistic_mix_and_zipcodes.png  used on input 
-line 520.
+line 564.
 (pdftex.def)             Requested size: 441.57086pt x 175.00127pt.
 
 
-[9 <./figures/part_comparison_overview.png> <./figures/realistic_mix_and_zipcod
-es.png>]
+[9 <./figures/part_comparison_overview.png>]
 
-[10] (./main_assignment_aligned.aux)
+[10 <./figures/realistic_mix_and_zipcodes.png>]
+
+[11] (./main_assignment_aligned.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1106,13 +1107,13 @@ Package rerunfilecheck Info: File `main_assignment_aligned.out' has not changed
 (rerunfilecheck)             Checksum: 3C4C442ABFB78FF31E6BFC285933A203;2112.
  ) 
 Here is how much of TeX's memory you used:
- 31702 strings out of 473190
- 646149 string characters out of 5715801
- 1038486 words of memory out of 5000000
- 54319 multiletter control sequences out of 15000+600000
- 576413 words of font info for 162 fonts, out of 8000000 for 9000
+ 31721 strings out of 473190
+ 646371 string characters out of 5715801
+ 1042486 words of memory out of 5000000
+ 54323 multiletter control sequences out of 15000+600000
+ 577230 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,1020b,1081s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,1020b,1194s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -1133,10 +1134,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/tex
 mf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main_assignment_aligned.pdf (12 pages, 544952 bytes).
+Output written on main_assignment_aligned.pdf (13 pages, 549467 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
- 49801 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 51849 words of extra memory for PDF output out of 61914 (max. 10000000)
 

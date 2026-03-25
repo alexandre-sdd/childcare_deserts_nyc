@@ -271,7 +271,7 @@ We solve the problem in two stages. In \textbf{Part 1}, we formulate an ideal be
 The analysis combines data preparation, parameter estimation, and optimization. We first construct zipcode-level demand targets and baseline capacity measures from the provided demographic and childcare datasets. Part 1 then solves an ideal mixed-integer model using those estimated parameters. Part 2 does not build on the Part 1 solution itself; instead, it branches from the same cleaned facility data and the zipcode-level demand table, then adds candidate locations, distance-based screening, and realistic expansion parameters before solving its own mixed-integer model. This distinction matters because the realistic model reuses the shared preprocessing and demand construction, not the intervention decisions from the ideal solve.
 
 \paragraph{Code availability.}
-The working code is organized as a seven-stage notebook pipeline in the submitted repository. The workflow first cleans the shared inputs, then estimates and solves the ideal model, then estimates and solves the realistic model, and finally exports the comparison figures used in the report. The notebook pipeline is stored under \texttt{notebooks/}, while the report source is stored under \texttt{report/}. \Cref{fig:code-pipeline-main} summarizes the execution flow.
+The working code is organized as a seven-stage notebook pipeline in the submitted repository. The workflow first cleans the shared inputs, then estimates and solves the ideal model, then estimates and solves the realistic model, and finally exports the comparison figures used in the report. The submitted repository is available at \url{https://github.com/alexandre-sdd/childcare_deserts_nyc}; the notebook pipeline is stored under \texttt{notebooks/}, while the report source is stored under \texttt{report/}. \Cref{fig:code-pipeline-main} summarizes the execution flow.
 
 \begin{figure}[H]
 \centering
@@ -401,7 +401,7 @@ U_f = \min(1.2\,n_f,\ 500)
 \]
 is the facility-specific upper bound.
 
-The project statement specifies that the first-block per-slot expansion cost \(c_{\text{slots}}(n_f)\) should decrease with current facility size, but it does not provide a closed-form expression. We therefore approximated the first expansion block with size-based per-slot cost tiers for expansions below \(100\%\) of current capacity:
+For both parts, \(n_f\) denotes the current licensed capacity at facility \(f\). In Part 1, \(x_f\) denotes the total added slots at that facility. The project statement specifies that the first-block per-slot expansion cost \(c_{\text{slots}}(n_f)\) should decrease with current facility size, but it does not provide a closed-form expression. We therefore approximated the first expansion block with size-based per-slot cost tiers for expansions below \(100\%\) of current capacity:
 \[
 c_f^{(1)} =
 \begin{cases}
@@ -559,6 +559,11 @@ y_{zs}, g_{zs} \in \mathbb{Z}_+
 
 Taken together, these constraints ensure that every zipcode receives enough total capacity and enough under-\(5\) capacity while respecting the project’s rules on expansion and construction.
 
+\begin{resultbox}
+\textbf{Implemented Part 1 model.}
+The benchmark optimization stage solves a citywide MILP with \(32{,}714\) variables and \(63{,}251\) constraints. The model enforces zipcode-level total and under-\(5\) service targets through facility expansion and zipcode-level new-build decisions, but it does not impose candidate-site or spacing restrictions.
+\end{resultbox}
+
 \subsection{Results and interpretation}
 
 \subsubsection{Optimal solution summary}
@@ -654,7 +659,7 @@ The corresponding block-specific cost coefficients follow the formulas used in t
 \mathrm{coef3}_f = \frac{20000 + 1000\,n_f}{n_f}
 \]
 
-Under the original assignment Part 2 rule, the total expansion cost at facility \(f\) is
+If \(x_f := x_{1f}+x_{2f}+x_{3f}\) denotes total added slots at facility \(f\), then under the original assignment Part 2 rule, the total expansion cost is
 \[
 C_f(x_f)=
 \begin{cases}
@@ -722,7 +727,7 @@ The realistic formulation uses the following assumptions:
 
 \subsubsection{Decision variables}
 
-The realistic model extends the Part 1 decision structure by introducing candidate-site decisions. For each existing facility \(f\), we define:
+The realistic model extends the Part 1 decision structure by introducing candidate-site decisions. For zipcode-level aggregation, \(L(z)\) denotes the set of candidate sites in zipcode \(z\). For each existing facility \(f\), we define:
 \begin{itemize}
     \item \(x_{1f}, x_{2f}, x_{3f}\): expansion slots in the three realistic cost blocks;
     \item \(u_f\): under-\(5\) slots assigned within the expansion at facility \(f\).
@@ -795,7 +800,7 @@ Finally, the zipcode-level total-capacity and under-\(5\)-capacity constraints a
 +
 \sum_{f \in F(z)} (x_{1f}+x_{2f}+x_{3f})
 +
-\sum_{(l,s)\in L(z)} B_s y_{ls}
+\sum_{l \in L(z)} \sum_{s \in S} B_s y_{ls}
 \ge \mathrm{req\_total}_z
 \qquad \forall z \in Z
 \]
@@ -804,7 +809,7 @@ Finally, the zipcode-level total-capacity and under-\(5\)-capacity constraints a
 +
 \sum_{f \in F(z)} u_f
 +
-\sum_{(l,s)\in L(z)} g_{ls}
+\sum_{l \in L(z)} \sum_{s \in S} g_{ls}
 \ge \mathrm{req\_under5}_z
 \qquad \forall z \in Z
 \]
