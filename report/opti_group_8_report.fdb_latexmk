@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774476678.37155 "main_assignment_aligned.tex" "main_assignment_aligned.pdf" "main_assignment_aligned" 1774476679.907 0
+["pdflatex"] 1774477127.71381 "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/opti_group_8_report.tex" "opti_group_8_report.pdf" "opti_group_8_report" 1774477129.06242 0
+  "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/opti_group_8_report.tex" 1774476672.33782 28330 676eec12b8ff22a587502264755504a3 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcbx1000.tfm" 1136768653 1536 30fde759286ded71559881bfa2623939 ""
@@ -212,14 +213,14 @@
   "figures/part_comparison_overview.png" 1774385996.01233 96766 6ef06849559b969d77596924bd426447 ""
   "figures/realistic_expansion_functions.png" 1774472179.64098 81267 1f7bcdcdad6bdfe9062422580661757f ""
   "figures/realistic_mix_and_zipcodes.png" 1774385996.34906 127393 03a0f9ed79b0793857641f7a9cf29db0 ""
-  "main_assignment_aligned.aux" 1774476679.80156 6328 0d6ae8fe34e494e95f42152c3403984c "pdflatex"
-  "main_assignment_aligned.out" 1774476679.8025 2112 3c4c442abfb78ff31e6bfc285933a203 "pdflatex"
-  "main_assignment_aligned.tex" 1774476672.33782 28330 676eec12b8ff22a587502264755504a3 ""
-  "main_assignment_aligned.toc" 1774476679.80272 1288 6709a27e2c9e501eb038bc4eac4998ba "pdflatex"
+  "opti_group_8_report.aux" 1774477128.99623 6328 0d6ae8fe34e494e95f42152c3403984c "pdflatex"
+  "opti_group_8_report.out" 1774477128.99723 2112 3c4c442abfb78ff31e6bfc285933a203 "pdflatex"
+  "opti_group_8_report.tex" 1774476672.33782 28330 676eec12b8ff22a587502264755504a3 ""
+  "opti_group_8_report.toc" 1774477128.99751 1288 6709a27e2c9e501eb038bc4eac4998ba "pdflatex"
   (generated)
-  "main_assignment_aligned.aux"
-  "main_assignment_aligned.log"
-  "main_assignment_aligned.out"
-  "main_assignment_aligned.pdf"
-  "main_assignment_aligned.toc"
+  "opti_group_8_report.aux"
+  "opti_group_8_report.log"
+  "opti_group_8_report.out"
+  "opti_group_8_report.pdf"
+  "opti_group_8_report.toc"
   (rewritten before read)
