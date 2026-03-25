@@ -2,7 +2,7 @@ PWD /Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Op
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main_assignment_aligned.tex
+INPUT /Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/main_assignment_aligned.tex
 OUTPUT main_assignment_aligned.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
