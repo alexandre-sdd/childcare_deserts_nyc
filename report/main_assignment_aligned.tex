@@ -292,7 +292,14 @@ These correspond to the \(0\%\) to \(10\%\), \(10\%\) to \(15\%\), and \(15\%\) 
 \mathrm{coef2}_f = \frac{20000 + 400\,n_f}{n_f},\qquad
 \mathrm{coef3}_f = \frac{20000 + 1000\,n_f}{n_f}.
 \]
-The processed inputs imply a citywide realistic expansion room of \(61{,}197\) slots. The shared benchmark demand table also carries the zero-child rule into both models, so zip codes with zero observed child population have zero total-slot requirement.
+The processed inputs imply a citywide realistic expansion room of \(61{,}197\) slots. \Cref{fig:realistic-expansion-functions} visualizes the staircase block caps and the size-dependent block coefficients. The shared benchmark demand table also carries the zero-child rule into both models, so zip codes with zero observed child population have zero total-slot requirement.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{realistic_expansion_functions.png}
+\caption{Schematic of the implemented Part 2 expansion functions. Left: cumulative-floor block caps as functions of current facility size. Right: block-specific per-slot coefficients as functions of current facility size.}
+\label{fig:realistic-expansion-functions}
+\end{figure}
 
 \begin{table}[H]
 \centering

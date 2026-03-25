@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1774468701.98061 "main.tex" "main.pdf" "main" 1774468704.11389 0
+["pdflatex"] 1774471187.11593 "main.tex" "main.pdf" "main" 1774471190.19324 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -216,11 +216,12 @@
   "figures/ideal_cost_breakdown.png" 1774385995.75018 78785 ec282a77de1dc27f69f39d5779a90ef6 ""
   "figures/ieor.png" 1774320318.90024 20800 3930b70ff4523dca8285619c31d16b6f ""
   "figures/part_comparison_overview.png" 1774385996.01233 96766 6ef06849559b969d77596924bd426447 ""
+  "figures/realistic_expansion_functions.png" 1774471134.58354 131015 828b7fdb2774d4c77f38fff500114608 ""
   "figures/realistic_mix_and_zipcodes.png" 1774385996.34906 127393 03a0f9ed79b0793857641f7a9cf29db0 ""
-  "main.aux" 1774468704.01111 8300 40e7482e144ef445ee248f930485e1f0 "pdflatex"
-  "main.out" 1774468704.01205 6513 66a49512639428fbcc2e81d63dacfd15 "pdflatex"
-  "main.tex" 1774468685.44356 46745 927dd1ba6e920b3f455cc22b4ecbf5ad ""
-  "main.toc" 1774468704.01229 3726 5934133481c2b83b09562bac7c526672 "pdflatex"
+  "main.aux" 1774471190.09812 9008 da17e94adb48fd0317fee8d7c17483b0 "pdflatex"
+  "main.out" 1774471190.09912 6513 66432fa70b0b3b04bb341dd1a5ead0b6 "pdflatex"
+  "main.tex" 1774471180.03236 47396 feb08ec9a48f7e3ac5e9180b63b2c904 ""
+  "main.toc" 1774471190.09973 3726 47371756b0f582153b4eb74ac09ebc7e "pdflatex"
   (generated)
   "main.aux"
   "main.log"

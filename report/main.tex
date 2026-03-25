@@ -654,6 +654,15 @@ The corresponding block-specific cost coefficients follow the formulas used in t
 \mathrm{coef3}_f = \frac{20000 + 1000\,n_f}{n_f}
 \]
 
+\Cref{fig:realistic-expansion-functions} visualizes these implemented Part 2 expansion functions. The left panel shows the staircase caps created by cumulative floors, and the right panel shows how the block-specific per-slot coefficients decrease with facility size.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{realistic_expansion_functions.png}
+\caption{Schematic of the implemented Part 2 expansion functions. Left: cumulative-floor block caps as functions of current facility size. Right: block-specific per-slot coefficients as functions of current facility size.}
+\label{fig:realistic-expansion-functions}
+\end{figure}
+
 \subsubsection{Candidate-site and distance parameters}
 
 The realistic model uses the cleaned potential-locations dataset to define candidate sites for new construction. Each candidate site is combined with the same three build-size options from Part 1: small, medium, and large. The new-facility cost and capacity menu is therefore unchanged, but now every new opening must be placed at a specific observed site.

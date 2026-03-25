@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  25 MAR 2026 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  25 MAR 2026 16:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -862,26 +862,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 [1]
 
 [2]
+<figures/realistic_expansion_functions.png, id=117, 817.6365pt x 318.9735pt>
+File: figures/realistic_expansion_functions.png Graphic file (type png)
+<use figures/realistic_expansion_functions.png>
+Package pdftex.def Info: figures/realistic_expansion_functions.png  used on input line 299.
+(pdftex.def)             Requested size: 446.26582pt x 174.09749pt.
+
 
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-[4]
+[4 <./figures/realistic_expansion_functions.png>]
 
 [5]
 
 [6]
-<figures/part_comparison_overview.png, id=142, 895.491pt x 342.954pt>
+<figures/part_comparison_overview.png, id=146, 895.491pt x 342.954pt>
 File: figures/part_comparison_overview.png Graphic file (type png)
 <use figures/part_comparison_overview.png>
-Package pdftex.def Info: figures/part_comparison_overview.png  used on input line 497.
+Package pdftex.def Info: figures/part_comparison_overview.png  used on input line 504.
 (pdftex.def)             Requested size: 441.57086pt x 169.11124pt.
 
 
 [7]
-<figures/realistic_mix_and_zipcodes.png, id=149, 891.8775pt x 353.466pt>
+<figures/realistic_mix_and_zipcodes.png, id=153, 891.8775pt x 353.466pt>
 File: figures/realistic_mix_and_zipcodes.png Graphic file (type png)
 <use figures/realistic_mix_and_zipcodes.png>
-Package pdftex.def Info: figures/realistic_mix_and_zipcodes.png  used on input line 504.
+Package pdftex.def Info: figures/realistic_mix_and_zipcodes.png  used on input line 511.
 (pdftex.def)             Requested size: 441.57086pt x 175.00127pt.
 
 
@@ -896,18 +902,18 @@ Package rerunfilecheck Info: File `main_assignment_aligned.out' has not changed.
 (rerunfilecheck)             Checksum: 3C4C442ABFB78FF31E6BFC285933A203;2112.
  ) 
 Here is how much of TeX's memory you used:
- 31692 strings out of 473190
- 645975 string characters out of 5715801
+ 31706 strings out of 473190
+ 646494 string characters out of 5715801
  1038486 words of memory out of 5000000
- 54308 multiletter control sequences out of 15000+600000
- 576464 words of font info for 163 fonts, out of 8000000 for 9000
+ 54319 multiletter control sequences out of 15000+600000
+ 576515 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,93p,1128b,1081s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main_assignment_aligned.pdf (11 pages, 479180 bytes).
+Output written on main_assignment_aligned.pdf (11 pages, 602575 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 49796 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 49801 words of extra memory for PDF output out of 51595 (max. 10000000)
 

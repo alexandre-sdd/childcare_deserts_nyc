@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774470807.85915 "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/main_assignment_aligned.tex" "main_assignment_aligned.pdf" "main_assignment_aligned" 1774470809.42219 0
-  "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/main_assignment_aligned.tex" 1774470451.01069 24522 ed745cf06a550509755077faeb25b221 ""
+["pdflatex"] 1774471192.64141 "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/main_assignment_aligned.tex" "main_assignment_aligned.pdf" "main_assignment_aligned" 1774471194.71968 0
+  "/Users/alexandresepulvedadedietrich/Documents/School/Columbia/Spring_2026/Optimization/group_project/report/main_assignment_aligned.tex" 1774471175.00199 25024 400c811b1f70dfd1318296fdfe68a5d6 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcbx1000.tfm" 1136768653 1536 30fde759286ded71559881bfa2623939 ""
@@ -211,11 +211,12 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "figures/ieor.png" 1774320318.90024 20800 3930b70ff4523dca8285619c31d16b6f ""
   "figures/part_comparison_overview.png" 1774385996.01233 96766 6ef06849559b969d77596924bd426447 ""
+  "figures/realistic_expansion_functions.png" 1774471134.58354 131015 828b7fdb2774d4c77f38fff500114608 ""
   "figures/realistic_mix_and_zipcodes.png" 1774385996.34906 127393 03a0f9ed79b0793857641f7a9cf29db0 ""
-  "main_assignment_aligned.aux" 1774470809.34467 5514 8ba1f7992b3b091d4f2d88a985affa32 "pdflatex"
-  "main_assignment_aligned.out" 1774470809.3456 2112 3c4c442abfb78ff31e6bfc285933a203 "pdflatex"
-  "main_assignment_aligned.tex" 1774470451.01069 24522 ed745cf06a550509755077faeb25b221 ""
-  "main_assignment_aligned.toc" 1774470809.3458 1287 dc835868e0719cb366490fc1ad118fd8 "pdflatex"
+  "main_assignment_aligned.aux" 1774471194.6485 6218 b17243c37f3f98deb412cd03d60ed8d8 "pdflatex"
+  "main_assignment_aligned.out" 1774471194.64926 2112 3c4c442abfb78ff31e6bfc285933a203 "pdflatex"
+  "main_assignment_aligned.tex" 1774471175.00199 25024 400c811b1f70dfd1318296fdfe68a5d6 ""
+  "main_assignment_aligned.toc" 1774471194.64944 1287 e14694d324dba9c6309ff9ac47829b91 "pdflatex"
   (generated)
   "main_assignment_aligned.aux"
   "main_assignment_aligned.log"
